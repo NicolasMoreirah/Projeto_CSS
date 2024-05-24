@@ -4,91 +4,150 @@
     box-sizing: border-box;
 }
 
+/**********************************/
+/* 0. Variáveis
+/* 1. Container
+/* 2. Menu
+/* 3. Banner
+/* 4. Promo
+/* 5. line
+/* 6. Main
+/* 7. Product
+/* 8. Footer
+/**********************************/
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+
+:root {
+    --lime-color: lime;
+    --blue-color: blue;
+    --gray-color: #ccc;
+    --aqua-color: aqua;
+    --red-color: red;
+    --yellow-color: yellow;
+    --pink-color: pink;
+    --purple-color: purple;
+    --black-color: black;
+    --white-color: white;
+    --ff-primary: "Nunito", Helvetica, Arial, sans-serif;
+}
+
+/**********************************/
+/* 1. Estilos gerais
+/**********************************/
+
+body {
+    background-color: var(--white-color);
+    font-family: var(--ff-primary);
+}
+
+a,
+a:hover,
+a:active,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+/**********************************/
+/* 2. Menu
+/**********************************/
+
 header {
-    margin: 5px;
-    border: 3px solid red;
-    /*  */
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    padding: 20px 5%
+    padding: 20px 5%;
+    border: 3px solid var(--red-color);
+    margin: 5px;
 }
 
 
-.logo {
-    border: 2px solid lime;
-    /*  */
+.header__logo {
     display: flex;
     align-items: center;
     gap: 5px;
+    border: 2px solid var(--lime-color);
+    padding: 5px;
 }
 
-.logo span {
-    border: 2px solid purple;
-    /*  */
+.header__logo img {
     font-weight: 700;
+    border: 2px solid var(--purple-color);
+    padding: 3px;
 }
 
-.logo img {
-    border: 2px solid purple;
-    /*  */
+.header__logo span {
     font-weight: 700;
+    border: 2px solid var(--purple-color);
+    padding: 3px;
 }
 
-
-nav {
-    border: 2px solid yellow;
+.header__nav {
     display: flex;
     align-items: center;
     gap: 30px;
+    border: 2px solid yellow;
+    padding: 3px;
 }
 
-#link1 {
-    border: 2px solid purple;
+.header__nav .header__nav-link {
+    border: 2px solid var(--purple-color);
+    padding: 3px;
 }
 
-#link2 {
-    border: 2px solid limegreen;
-}
+/**********************************/
+/* 3. Banner
+/**********************************/
 
-#link3 {
-    border: 2px solid chocolate;
-}
-
-section {
-    margin: 5px;
-    border: 3px solid black;
+.banner {
     display: flex;
     justify-content: center;
     align-items: center;
-
-}
-
-section img {
-    border: 2px solid aqua;
+    border: 3px solid var(--black-color);
     margin: 5px;
-
+    padding: 3px;
 }
 
-.promotion-header {
-    border: 3px solid blue;
+.banner__image {
+    max-width: 100%;
+    border: 2px solid var(--red-color);
+}
+
+/**********************************/
+/* 4. Promo
+/**********************************/
+
+.promo {
     display: flex;
     justify-content: space-between;
-    padding: 15px 5%
+    padding: 15px 5%;
+    border: 3px solid var(--lime-color);
+    margin: 5px;
 }
 
-.promotion-header span {
-    border: 2px solid pink;
-
-}
-
-.promotion-header--title {
-    border: 2px solid pink;
+.promo .promo__title {
     font-weight: 700;
-    color: cadetblue;
+    color: var(--black-color);
     text-transform: uppercase;
+    border: 2px solid var(--yellow-color);
+    padding: 3px;
 }
+
+.promo__subtitle {
+    font-weight: 700;
+    color: var(--black-color);
+    border: 2px solid var(--yellow-color);
+    padding: 3px;
+}
+
+/**********************************/
+/* 5. Line
+/**********************************/
 
 .line {
     width: 100%;
@@ -97,58 +156,67 @@ section img {
     margin: 5px 0;
 }
 
-main {
-    border: 3px solid blue;
+/**********************************/
+/* 6. Main
+/**********************************/
+
+.main {
+    border: 3px solid var(--blue-color);
     display: flex;
     justify-content: space-between;
     padding: 20px 5%;
     margin: 5px;
-
-
 }
 
-.column {
-    border: 2px solid lime;
+.main .main__column {
     display: flex;
     flex-direction: column;
     gap: 30px;
-
-
+    border: 2px solid var(--lime-color);
 }
 
+/**********************************/
+/* 7. Product
+/**********************************/
+
 .product {
-    border: 2px solid red;
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin: 5px;
+    border: 2px solid var(--yellow-color);
+    padding: 3px;
 }
 
-.product img {
+.product .product__image {
     width: 250px;
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
+    border: 2px solid var(--purple-color);
 }
 
-.product span {
+
+.product .product__description {
     font-weight: 700;
-    border: 3px solid blue;
-
+    border: 3px solid var(--blue-color);
+    padding: 5px;
 }
 
-.product .sifrao {
+.product .product__price {
     font-weight: 700;
     border: 3px solid red;
-
+    padding: 5px;
 }
 
-.product .prince {
+.product .product__price-value {
     font-weight: 700;
     border: 3px solid lime;
-
 }
 
+/**********************************/
+/* 8. Footer
+/**********************************/
 
 footer {
     background-color: #eee;
